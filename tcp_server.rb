@@ -6,7 +6,7 @@ require 'socket'
 READ_TIMEOUT = 0.5
 LISTEN_PORT = 10000
 
-server = TCPServer.open(10000)
+server = TCPServer.open("192.168.33.10", 10000)
 addr = server.addr
 puts "Listening #{addr[3]} (#{addr[1]})"
 
