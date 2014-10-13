@@ -16,7 +16,7 @@ begin
       peer = io.peeraddr
       puts "Connected from #{peer[3]} (#{peer[1]})"
       begin
-        p Time.now.strftime("%H:%M:%S")
+        p Time.now.strftime("%H:%M:%S.%L")
         loop do
           reads, writes, excepts = IO.select([io], nil, nil, READ_TIMEOUT)
           raise 'Connection timeout.' unless reads
@@ -25,8 +25,7 @@ begin
           io.write char
         end
       rescue RuntimeError
-        p Time.now.strftime("%H:%M:%S")
-        puts $!.message
+#        puts $!.message
       end
       io.close
     end
