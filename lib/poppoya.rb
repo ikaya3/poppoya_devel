@@ -1,0 +1,1 @@
+require 'poppoya/telegram.rb'
