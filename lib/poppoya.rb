@@ -1,1 +1,2 @@
-require 'poppoya/telegram.rb'
+require_relative 'poppoya/telegram'
+require_relative 'poppoya/node'

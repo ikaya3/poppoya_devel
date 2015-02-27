@@ -1,2 +1,2 @@
-require 'poppoya/telegram/telegram'
-require 'poppoya/telegram/telegram_factory'
+require_relative 'telegram/telegram'
+require_relative 'telegram/telegram_factory'
